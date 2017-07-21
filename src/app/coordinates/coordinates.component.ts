@@ -21,7 +21,6 @@ export class CoordinatesComponent {
     this.googleMapsApi.getAddressByCoordinates(latitude, longitude).subscribe(response => {
       this.address =response.json().results[0].formatted_address;
       this.coordinatesResults = true;
-      console.log(response.json());
     })
   }
 }

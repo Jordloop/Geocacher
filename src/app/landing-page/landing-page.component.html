@@ -1,5 +1,10 @@
-<ul class="nav nav-tabs">
-  <li><a routerLink="/search">Search</a></li>
-</ul>
-  <p>{{content}}</p>
-<router-outlet></router-outlet>
+<div class="landing-page">
+  <div class="rules">
+    <p>{{byAddress}}</p>
+    <p>{{byCoordinate}}</p>
+  </div>
+  <div class="searchLink">
+    <button routerLink="/search" class="btn btn-info">Search</button>
+  </div>
+  <router-outlet></router-outlet>
+</div>
