@@ -3,10 +3,13 @@
 <form>
   <div class="form-group">
     <label for="latitude">Address</label>
-    <input type=text #address>
+    <input value="400 SW 6th Ave, Portland, OR 97204" type=text #address>
   </div>
   <button (click)="getByAddress(address.value)" class="btn">Search</button>
 </form>
-<div *ngIf="results">
-  <h4>{{address.value}}'s coordinates are: {{latitude}}, {{longitude}}!'</h4>
+<div *ngIf="addressResults">
+  <hr>
+  <h5>Address: {{address.value}}</h5>
+  <h5>Latitude: {{latitude}}</h5>
+  <h5>Longitude: {{longitude}}</h5>
 </div>

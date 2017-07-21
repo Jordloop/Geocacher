@@ -2,12 +2,18 @@
 <hr>
 <form>
   <div class="form-group">
-    <label for="latitude">Latitude</label>
-    <input type=number #longitude>
+    <label for="longitude">Latitude</label>
+    <input value="45.5206322" type=number #latitude>
   </div>
   <div class="form-group">
-    <label for="longitude">Longitude</label>
-    <input type=number #latitude>
+    <label for="latitude">Longitude</label>
+    <input value="-122.6773577" type=number #longitude>
   </div>
   <button (click)="getByCoordinates(latitude.value, longitude.value)" class="btn">Search</button>
 </form>
+<div *ngIf="coordinatesResults">
+  <hr>
+  <h5>Address: {{address}}</h5>
+  <h5>Latitude: {{latitude.value}}</h5>
+  <h5>Longitude: {{longitude.value}}</h5>
+</div>

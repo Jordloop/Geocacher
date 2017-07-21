@@ -11,15 +11,18 @@ import { Observable } from 'rxjs/Observable';
 })
 export class CoordinatesComponent {
   heading = 'Search By Coordinates!';
+  coordinatesResults: boolean = null;
+  address: string;
 
 
   constructor(private googleMapsApi: GoogleMapsApiService) { }
 
   getByCoordinates(latitude: number, longitude: number) {
     this.googleMapsApi.getAddressByCoordinates(latitude, longitude).subscribe(response => {
-      console.log(response.json().results[0].address_components[0].long_name);
+      this.address =response.json().results[0].formatted_address;
+      this.coordinatesResults = true;
       console.log(response.json());
     })
   }
-
 }
+// 45.5206322 -122.6773577

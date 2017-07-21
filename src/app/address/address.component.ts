@@ -11,7 +11,7 @@ import { Observable } from 'rxjs/Observable';
 })
 export class AddressComponent {
   heading = 'Search By Address!';
-  results: boolean = null;
+  addressResults: boolean = null;
   longitude: number;
   latitude: number;
   constructor(private googleMapsApi: GoogleMapsApiService) { }
@@ -20,7 +20,7 @@ export class AddressComponent {
     this.googleMapsApi.getCoordinatesByAddress(address).subscribe(response => {
       this.latitude = response.json().results[0].geometry.location.lat;
       this.longitude = response.json().results[0].geometry.location.lng;
-      this.results = true;
+      this.addressResults = true;
     })
   }
 }
