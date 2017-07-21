@@ -9,7 +9,7 @@ export class GoogleMapsApiService {
 
   constructor(private http: Http, private photoService: GeocacheService) { }
 
-  getByCoordinates(latitude: number, longitude: number) {
+  getAddressByCoordinates(latitude: number, longitude: number) {
     return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + latitude + "," + longitude + "&key=" + geoKey);
  }
 
