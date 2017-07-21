@@ -7,3 +7,6 @@
   </div>
   <button (click)="getByAddress(address.value)" class="btn">Search</button>
 </form>
+<div *ngIf="results">
+  <h4>{{address.value}}'s coordinates are: {{latitude}}, {{longitude}}!'</h4>
+</div>
