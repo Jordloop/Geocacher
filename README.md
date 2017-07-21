@@ -1,28 +1,51 @@
-# Geocacher
+# Geocache 7/21/2017
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
-## Development server
+#### **By Jordan Loop**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
 
-## Code scaffolding
+A user can provide an address, the address' latitude/longitude coordinates will be returned. A user can provide latitude/longitude coordinates, the coordinates' address will be returned.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## Setup/Installation Requirements
 
-## Build
+#### From your terminal
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+* Clone repository to desktop
+  <pre>git clone https://github.com/Jordloop/Geocacher</pre>
 
-## Running unit tests
+* Install required packages from top level of project's directory.
+  <pre>npm install</pre>
+  <pre>bower install</pre>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Create src/app/api-keys.ts
+* Place your personal Geocoding API key in place of "key"
+  <pre>exports const geoKey="key"</pre>
 
-## Running end-to-end tests
+#### Obtain your own API key
+* Follow the steps provided by Google found here:<br>
+  https://developers.google.com/maps/documentation/geocoding/start#get-a-key
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+#### Useing the api
+* Run the following command in your terminal:
+  <pre>ng serve</pre>
+* Click the following link to access the api:<br>
+  http://localhost:4200/
+## Known Bugs
 
-## Further help
+* No known bugs
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Support and contact details
+
+If you have any issues or have questions, ideas, concerns, or contributions please contact through Github.
+
+## Technologies Used
+
+* Typescript
+* HTML
+* BootStrap
+* Angular 2
+
+
+### License
+Copyright (c) 2017 Jordan Loop, Epicodus
