@@ -11,10 +11,13 @@ import { Observable } from 'rxjs/Observable';
 })
 export class CoordinatesComponent {
   heading = 'Search By Coordinates!';
+
+
   constructor(private googleMapsApi: GoogleMapsApiService) { }
 
   getByCoordinates(latitude: number, longitude: number) {
     this.googleMapsApi.getAddressByCoordinates(latitude, longitude).subscribe(response => {
+      console.log(response.json().results[0].address_components[0].long_name);
       console.log(response.json());
     })
   }

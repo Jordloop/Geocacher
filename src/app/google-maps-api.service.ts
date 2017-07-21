@@ -13,4 +13,9 @@ export class GoogleMapsApiService {
     return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + latitude + "," + longitude + "&key=" + geoKey);
  }
 
+
+ getCoordinatesByAddress(address: string) {
+   return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=" + geoKey);
+ }
+
 }

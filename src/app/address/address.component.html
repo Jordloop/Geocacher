@@ -1,3 +1,9 @@
-<p>
-  address works!
-</p>
+<h2>{{heading}}</h2>
+<hr>
+<form>
+  <div class="form-group">
+    <label for="latitude">Address</label>
+    <input type=text #address>
+  </div>
+  <button (click)="getByAddress(address.value)" class="btn">Search</button>
+</form>
