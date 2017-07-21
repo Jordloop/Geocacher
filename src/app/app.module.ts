@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { CoordinatesComponent } from './coordinates/coordinates.component';
 import { AddressComponent } from './address/address.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     CoordinatesComponent,
-    AddressComponent
+    AddressComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
